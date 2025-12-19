@@ -65,9 +65,6 @@ def CALL_REDFISH(api_path, payload=None):
             if args.verbose > 0: WRITE_STATUS(message='Returned 200, successful password change')
             if args.verbose > 1: print(f"{json.dumps(response.json(),indent=4)}")
             return response
-def VERIFY_PASSWORD_CHANGE_FROM_JSON(returned_json:str):
-    if args.verbose > 0: WRITE_STATUS(message="Verifying that the password has changed from returned JSON")
-
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Change CIMC password using Redfish API")
